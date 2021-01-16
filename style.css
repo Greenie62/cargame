@@ -1,0 +1,179 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position:relative;
+}
+
+body{
+    height:100vh;
+    width:100vw;
+}
+
+
+header{
+    text-align:center;
+    height:10vh;
+}
+
+.gameContainer{
+    width:100vw;
+    height:90vh;
+    border:2px solid red;
+}
+
+
+
+/* @keyframes sirens{
+    0%{opacity:.5}
+    100%{opacity:1}
+} */
+
+
+.grasssideone, .grasssidetwo, .car, .road{
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.grasssideone{
+    height:100%;
+    width:10%;
+    background:green;
+}
+
+.grasssidetwo{
+    height:100%;
+    width:10%;
+    background:green;
+    left:90%;
+}
+
+.road{
+    width:80%;
+    height:100%;
+    background:gray;
+    z-index:-2;
+    left:10%;
+}
+
+.divider{
+    left:48%;
+    width:3px;
+    height:100%;
+    background:yellow;
+}
+
+.scoreh3{
+    top:50px;
+    left:35%;
+    z-index:2;
+}
+
+.controlRow{
+    width:75%;
+    display:flex;
+    align-items:center;
+    justify-content: space-evenly;
+    position:absolute;
+    left:12%;
+    top:90%;
+
+}
+
+
+.car, .othercar{
+    height:100px;
+    width:50px;
+    border:1px solid black;
+    left:45%;
+    top:65%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: space-evenly;
+    background:rgb(82, 82, 214);
+    border-radius:5%;
+    transition:1s ease;
+    border-radius:5%;
+
+}
+
+.backTireRow, .frontTireRow{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    height:20%;
+    width:100%;
+    /* background:lightgray; */
+}
+
+.frontwindshield, .windshield{
+    width:100%;
+    height:75%;
+    background:lightgray;
+}
+
+.windshield{
+    height:50%;
+}
+
+.tire{
+    width:10px;
+    height:100%;
+    background:black;
+    z-index:-1;
+}
+
+.tireone, .tirethree{
+    left:-7px;
+}
+
+.tiretwo, .tirefour{
+    left:7px;
+}
+
+.sirens{
+    width:70%;
+    height:10%;
+    border:1px solid black;
+    display:flex;
+    align-items:center;
+    justify-content: space-evenly;
+}
+
+.red, .blue{
+    height:100%;
+    width:50%;
+    background:red;
+    animation:sirens 1s infinite;
+}
+
+.blue{
+    background:blue;
+    animation:sirens 1s infinite;
+}
+
+.othercar{
+    background:red;
+    top:10px;
+    left:75px;
+    border-radius:5%;
+}
+
+.crashone{
+    animation:spintwo 2s forwards;
+}
+
+@keyframes spintwo{
+    100%{left:200px;top:200px;transform:rotate(540deg)}
+}
+
+.crash{
+    animation:spin 2s forwards;
+}
+
+@keyframes spin{
+    100%{transform:rotate(720deg);height:100px}
+}
